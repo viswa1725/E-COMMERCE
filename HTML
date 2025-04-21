@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopNow E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>ShopNow</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="product-section">
+    <h2>Our Products</h2>
+
+    <div class="category-buttons">
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('dresses')">Dresses</button>
+      <button onclick="filterProducts('shoes')">Shoes</button>
+      <button onclick="filterProducts('slippers')">Slippers</button>
+      <button onclick="filterProducts('appliances')">Home Appliances</button>
+    </div>
+
+    <div class="product-container">
+      <!-- Example products for each category -->
+      <div class="product-card dresses">
+        <img src="C:\Users\maani\Desktop\e commerces\vishwa\tourist-sunny-day.jpg" alt="Dress" />
+        <h3>Summer Dress</h3>
+        <p>₹1200</p>
+        <button>Buy Now</button>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card shoes">
+        <img src="C:\Users\maani\Desktop\e commerces\vishwa\Chic Air Force 1 Custom Black White Gray Shoes Monochrome Shadow Essence Mens Womens 2024.jpg" alt="Shoes" />
+        <h3>Top Sneakers</h3>
+        <p>₹1500</p>
+        <button>Buy Now</button>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card slippers">
+        <img src="C:\Users\maani\Desktop\e commerces\vishwa\COZY LEATHER SLIPPERS.jpg" alt="Slippers" />
+        <h3>Cozy Slippers</h3>
+        <p>₹500</p>
+        <button>Buy Now</button>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card appliances">
+        <img src="C:\Users\maani\Desktop\e commerces\vishwa\Buy Philips Mixer Grinder Online at Philips Domestic Appliances.jpg" alt="Appliance" />
+        <h3>Mixer Grinder</h3>
+        <p>₹2400</p>
+        <button>Buy Now</button>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card shoes">
+        <img src="C:\Users\maani\Desktop\e commerces\vishwa\pexels-mnzoutfits-1598505.jpg" alt="Nike Dunk" />
+        <h3>Nike Dunk</h3>
+        <p>₹750</p>
+        <button>Buy Now</button>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card dresses">
+        <img src="C:\Users\maani\Desktop\e commerces\vishwa\42 Handsome Prom Outfits for Guys.jpg" alt="Party Dress" />
+        <h3>Party Dress</h3>
+        <p>₹1600</p>
+        <button>Buy Now</button>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 ShopNow. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function filterProducts(category) {
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
